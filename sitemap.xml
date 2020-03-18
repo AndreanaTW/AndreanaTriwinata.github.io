@@ -11,5 +11,9 @@
      <loc>https://squidfunk.github.io/mkdocs-material/NewtonRhapson/</loc>
      <lastmod>2020-03-18</lastmod>
      <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://squidfunk.github.io/mkdocs-material/RecrusiveTrapezoid/</loc>
+     <lastmod>2020-03-18</lastmod>
+     <changefreq>daily</changefreq>
     </url>
 </urlset>
