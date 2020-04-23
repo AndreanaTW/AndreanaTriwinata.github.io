@@ -13,7 +13,7 @@
         <meta name="description" content="A Material Design theme for MkDocs">
       
       
-        <link rel="canonical" href="https://squidfunk.github.io/mkdocs-material/NewtonRhapson/">
+        <link rel="canonical" href="https://squidfunk.github.io/mkdocs-material/MetodeEuler/">
       
       
         <meta name="author" content="Martin Donath">
@@ -42,7 +42,7 @@
     
     
       
-        <title>Tugas2 - Tugas Komputasi Numerik</title>
+        <title>MetodeEuler - Tugas Komputasi Numerik</title>
       
     
     
@@ -116,10 +116,6 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#menyusun-algoritma-dan-pemrograman-newton-rhapson" tabindex="0" class="md-skip">
-        Skip to content
-      </a>
-    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
@@ -142,7 +138,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Tugas2
+                MetodeEuler
               
             </span>
           
@@ -307,52 +303,11 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Tugas2
-      </label>
-    
-    <a href="./" title="Tugas2" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../NewtonRhapson/" title="Tugas2" class="md-nav__link">
       Tugas2
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#menyusun-algoritma-dan-pemrograman-newton-rhapson" class="md-nav__link">
-    Menyusun Algoritma dan Pemrograman Newton Rhapson
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#listing-program" class="md-nav__link">
-    Listing Program
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
     
@@ -411,101 +366,45 @@
               </div>
             
             
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#menyusun-algoritma-dan-pemrograman-newton-rhapson" class="md-nav__link">
-    Menyusun Algoritma dan Pemrograman Newton Rhapson
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#listing-program" class="md-nav__link">
-    Listing Program
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
                 
                 
-                  <h1>Tugas2</h1>
+                  <h1>MetodeEuler</h1>
                 
-                <p>​       <strong>Metode Newton-Raphson Dengan Python</strong></p>
-<p>Newton-Raphson merupakan metode yang memanfaatkan turunan dan akar awal dari persamaan untuk mencari akar dari persamaan non linier.Untuk rumus Newton-Raphson sendiri adalah</p>
-<p><img alt="" src="F:\DATA\data dhea 2\dheaw\smt 4\komputasi numerik\newtonraphsonrumus.jpg" /></p>
-<p>Keterangan :</p>
-<p>xn = akar ke n
- xn-1 = akar ke n-1
- f(xn-1) = fungsi persamaan dari akar ke n-1
- f'(xn-1) = fungsi turunan persamaan dari akar ke n-1</p>
-<h3 id="menyusun-algoritma-dan-pemrograman-newton-rhapson"><strong>Menyusun Algoritma dan Pemrograman Newton Rhapson</strong><a class="headerlink" href="#menyusun-algoritma-dan-pemrograman-newton-rhapson" title="Permanent link">&para;</a></h3>
-<p>dari rumus yang kita dapat kita dapat menyusun sebuah algoritma yang nantinya akan dibuat menjadi sebuah program. Algoritma menyusun akar - akar <em>f(x)</em> = 0 sebagai berikut :</p>
-<p><img alt="image-20200310175450196" src="C:\Users\dea\AppData\Roaming\Typora\typora-user-images\image-20200310175450196.png" /></p>
-<h3 id="listing-program"><strong>Listing Program</strong><a class="headerlink" href="#listing-program" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">math</span>
+                <p><strong>METODE EULER</strong></p>
+<p>Metode Euler bisa diartikan dengan prosedur numerik pertama untuk menyelesaikan persamaan diferenssial biasa dengan nilai awal yang diberikan. Metode Euler merupakan metode eksplisit paling dasar untuk integrasi numerik persamaan diferensial biasa dengan merupakan metode Runget-Kutta paling sederhana dibandingkan dengan yang lainnya. </p>
+<p>Metode euler atau disebut juga metode orde pertama karena persamaannya kita hanya mengambil sampai suku orde pertama saja, yang berarti bahwa kesalahan lokal (kesalahan per langkah) sebanding dengan kuadrat ukuran langkah, dan kesalahan global (kesalahan pada waktu tertentu) sebanding dengan ukuran langkah. Misalnya diberikan Persamaan Diferensial Biasa orde satu.</p>
+<p><strong>Contoh</strong></p>
+<p><img alt="" src="F:\DATA\data dhea 2\dheaw\smt 4\komputasi numerik\Tugas1\docs\t6.png" /></p>
+<p>temukan y(1.01), y(1.02), dan y(1.03) dengan menggunakan metode Euler untuk menyelesaikan Persamaan Diferensia Biasa.</p>
+<p><strong>Source Code</strong></p>
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
-<span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="n">function</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="p">)</span> <span class="o">-</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
-    <span class="k">return</span> <span class="n">function</span>
+<span class="c1">#Parameter untuk Euler</span>
+<span class="n">y0</span> <span class="o">=</span> <span class="o">-</span><span class="mi">4</span>
+<span class="n">x0</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;masukkan nilai x0 :&quot;</span><span class="p">))</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">h</span> <span class="o">=</span> <span class="mf">0.01</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">hasil</span> <span class="o">=</span> <span class="n">y0</span>
 
-<span class="k">def</span> <span class="nf">derivative</span><span class="p">(</span><span class="n">x</span><span class="p">):</span> 
-    <span class="n">h</span> <span class="o">=</span> <span class="mf">0.000001</span>
-    <span class="n">derivative</span> <span class="o">=</span> <span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">h</span><span class="p">)</span> <span class="o">-</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">))</span> <span class="o">/</span> <span class="n">h</span>
-    <span class="k">return</span> <span class="n">derivative</span>
-
-<span class="k">def</span> <span class="nf">newton_raphson</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="k">return</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">/</span> <span class="n">derivative</span><span class="p">(</span><span class="n">x</span><span class="p">)))</span>
-
-
-
-
-<span class="k">def</span> <span class="nf">iterate</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
-    <span class="n">x</span> <span class="o">=</span> <span class="n">p</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-        <span class="n">x</span> <span class="o">=</span> <span class="n">newton_raphson</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span> <span class="n">x</span><span class="p">)</span>         
-    <span class="k">return</span> <span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
-
-
-<span class="nb">print</span><span class="p">(</span><span class="n">iterate</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="c1">#Metode Euler</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">hasil</span> <span class="o">=</span> <span class="n">y0</span> <span class="o">+</span> <span class="n">h</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="p">(</span><span class="n">x0</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="n">x0</span> <span class="o">+=</span> <span class="n">h</span>
+    <span class="n">y0</span> <span class="o">=</span> <span class="n">hasil</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Langkah&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;: y&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;= &quot;</span><span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">hasil</span><span class="p">))</span>
 </code></pre></div>
 
-<p>Output sebagai berikut :</p>
-<div class="codehilite"><pre><span></span><code><span class="mf">2.999994000093219</span>
-<span class="mf">2.199996832027392</span>
-<span class="mf">1.780829491896542</span>
-<span class="mf">1.6363030634057565</span>
-<span class="mf">1.618304588651506</span>
-<span class="mf">1.6180340496697716</span>
-<span class="mf">1.6180339887499486</span>
-<span class="mf">1.6180339887498947</span>
-<span class="mf">1.6180339887498947</span>
-<span class="mf">1.6180339887498947</span>
+<p><strong>Hasil Running</strong></p>
+<div class="codehilite"><pre><span></span><code><span class="n">Langkah1</span><span class="p">:</span> <span class="n">y1</span><span class="o">=</span> <span class="o">-</span><span class="mf">3.98</span>
+<span class="n">Langkah2</span><span class="p">:</span> <span class="n">y2</span><span class="o">=</span> <span class="o">-</span><span class="mf">3.959799</span>
+<span class="n">Langkah3</span><span class="p">:</span> <span class="n">y3</span><span class="o">=</span> <span class="o">-</span><span class="mf">3.9393949999999998</span>
+
+<span class="n">Process</span> <span class="n">finished</span> <span class="k">with</span> <span class="n">exit</span> <span class="n">code</span> <span class="mi">0</span>
 </code></pre></div>
                 
                   
@@ -524,41 +423,6 @@
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid">
-        
-          <a href="../McLaurin/" title="Tugas1" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
-            </div>
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                Tugas1
-              </span>
-            </div>
-          </a>
-        
-        
-          <a href="../EliminasiGaus/" title="Tugas3" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Tugas3
-              </span>
-            </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
