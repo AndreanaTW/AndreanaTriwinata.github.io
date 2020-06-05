@@ -395,7 +395,7 @@
                 
                   <h1>Tugas7</h1>
                 
-                <p><strong>Monte Carlo Methods</strong></p>
+                <p><strong>MONTE CARLO METHODS</strong></p>
 <p>Metode Monte Carlo adalah kelas teknik untuk pengambilan sampel secara acak suatu distribusi probabilitas.</p>
 <p>Pada Konsep Umumnya:</p>
 <p>Telah ditemukan dalam konteks pengembangan bom atom pada tahun 1940-an. Bisa diaplikasikan untuk berbagai masalah. Bukan alat statistik. Bisa mengandalkan pengambilan sampel acak berulang. Biasanya memberikan solusi perkiraan. Bisa digunakan dalam kasus di mana analitis atau numerik
@@ -420,33 +420,10 @@ solusi tidak ada atau terlalu sulit untuk diterapkan. Juga dapat digunakan oleh 
 <p>Ada banyak domain masalah di mana menggambarkan atau memperkirakan distribusi probabilitas relatif mudah, tetapi menghitung jumlah yang diinginkan tidak bisa dilakukan. Ini mungkin karena banyak alasan, seperti sifat stokastik domain atau jumlah variabel acak eksponensial.</p>
 <p>Alih-alih, jumlah yang diinginkan dapat diperkirakan dengan menggunakan pengambilan sampel acak, disebut sebagai metode Monte Carlo. Metode-metode ini awalnya digunakan sekitar waktu ketika komputer pertama diciptakan dan tetap meresap melalui semua bidang sains dan teknik, termasuk kecerdasan buatan dan pembelajaran mesin.</p>
 <p>Fungsi NumPy normal () dapat digunakan untuk mengambil sampel secara acak dari distribusi Gaussian dengan rata-rata yang ditentukan (mu), standar deviasi (sigma), dan ukuran sampel.</p>
-<p>Untuk membuat contoh lebih menarik, kami akan mengulangi percobaan ini empat kali dengan sampel berukuran berbeda. Kami berharap bahwa ketika ukuran sampel meningkat, kepadatan probabilitas akan lebih baik mendekati kepadatan sebenarnya dari fungsi target, mengingat hukum jumlah besar.</p>
-<div class="codehilite"><pre><span></span><code><span class="c1"># example of effect of size on monte carlo sample</span>
-<span class="kn">from</span> <span class="nn">numpy.random</span> <span class="kn">import</span> <span class="n">normal</span>
-<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span>
-<span class="c1"># define the distribution</span>
-<span class="n">mu</span> <span class="o">=</span> <span class="mi">50</span>
-<span class="n">sigma</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="c1"># generate monte carlo samples of differing size</span>
-<span class="n">sizes</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">1000</span><span class="p">]</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">sizes</span><span class="p">)):</span>
-    <span class="c1"># generate sample</span>
-    <span class="n">sample</span> <span class="o">=</span> <span class="n">normal</span><span class="p">(</span><span class="n">mu</span><span class="p">,</span> <span class="n">sigma</span><span class="p">,</span> <span class="n">sizes</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-    <span class="c1"># plot histogram of sample</span>
-    <span class="n">pyplot</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
-    <span class="n">pyplot</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">sample</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
-    <span class="n">pyplot</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%d</span><span class="s1"> samples&#39;</span> <span class="o">%</span> <span class="n">sizes</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-    <span class="n">pyplot</span><span class="o">.</span><span class="n">xticks</span><span class="p">([])</span>
-<span class="c1"># show the plot</span>
-<span class="n">pyplot</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</code></pre></div>
-
-<p>Menjalankan contoh membuat empat sampel berukuran berbeda dan plot histogram untuk masing-masing.</p>
-<p>Kita dapat melihat bahwa ukuran sampel kecil 10 dan 50 tidak secara efektif menangkap kepadatan fungsi target. Kita dapat melihat bahwa 100 sampel lebih baik, tetapi tidak sampai 1.000 sampel kita melihat dengan jelas bentuk lonceng yang umum dari distribusi probabilitas Gaussian.</p>
-<p>Ini menyoroti kebutuhan untuk menarik banyak sampel, bahkan untuk variabel acak sederhana, dan manfaat peningkatan akurasi perkiraan dengan jumlah sampel yang diambil</p>
-<p><img alt="" src="../carlos.png" /></p>
-<p>Untuk penerapan contoh lain yang menggunakan Metode Monte Carlos.</p>
-<p>Tulis sebuah program untuk memverifikasi angka itu <img alt="" src="../carlos1.png" />. Menggunakan metode monte carlo dan 2500 angka acak.</p>
+<p>Untuk membuat contoh lebih menarik, kami akan mengulangi percobaan ini empat kali dengan sampel berukuran berbeda. Kami berharap bahwa ketika ukuran sampel meningkat, kepadatan probabilitas akan lebih baik mendekati kepadatan sebenarnya dari fungsi target, mengingat hukum jumlah besar</p>
+<p><strong>Soal</strong></p>
+<p><img alt="" src="../monte1.png" /></p>
+<p>Hasil Running Nomor 3.</p>
 <div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">random</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -481,7 +458,34 @@ solusi tidak ada atau terlalu sulit untuk diterapkan. Juga dapat digunakan oleh 
 </code></pre></div>
 
 <p>Hasil running.</p>
-<p><img alt="" src="../carlos2.png" /></p>
+<p>yang pertama:</p>
+<p><img alt="" src="../monte2.png" /></p>
+<p>yang kedua:</p>
+<p><img alt="" src="../monte3.png" /></p>
+<p>yang ketiga:</p>
+<p><img alt="" src="../monte4.png" /></p>
+<p>Kesimpulannya adalah setelah dilakukan 3 kali percobaan nilai phi mendekati 3,14.</p>
+<p>Hasil Nomor 4.</p>
+<div class="codehilite"><pre><span></span><code><span class="c1">#Percobaan1</span>
+<span class="n">F</span><span class="p">:</span>\<span class="n">DATA</span>\<span class="n">data</span> <span class="n">dhea</span> <span class="mi">2</span>\<span class="n">dheaw</span>\<span class="n">smt</span> <span class="mi">4</span>\<span class="n">komputasi</span> <span class="n">numerik</span>\<span class="n">Tugas1</span>\<span class="n">docs</span>\<span class="n">montecarlo2</span><span class="o">.</span><span class="n">py</span> 
+<span class="n">Hasil</span> <span class="p">:</span>  <span class="mf">7.889285659898637</span>
+
+<span class="n">Process</span> <span class="n">finished</span> <span class="k">with</span> <span class="n">exit</span> <span class="n">code</span> <span class="mi">0</span>
+
+<span class="c1">#Percobaan2</span>
+<span class="n">F</span><span class="p">:</span>\<span class="n">DATA</span>\<span class="n">data</span> <span class="n">dhea</span> <span class="mi">2</span>\<span class="n">dheaw</span>\<span class="n">smt</span> <span class="mi">4</span>\<span class="n">komputasi</span> <span class="n">numerik</span>\<span class="n">Tugas1</span>\<span class="n">docs</span>\<span class="n">montecarlo2</span><span class="o">.</span><span class="n">py</span> 
+<span class="n">Hasil</span> <span class="p">:</span>  <span class="mf">8.02539169028922</span>
+
+<span class="n">Process</span> <span class="n">finished</span> <span class="k">with</span> <span class="n">exit</span> <span class="n">code</span> <span class="mi">0</span>
+
+<span class="c1">#Percobaan3</span>
+<span class="n">F</span><span class="p">:</span>\<span class="n">DATA</span>\<span class="n">data</span> <span class="n">dhea</span> <span class="mi">2</span>\<span class="n">dheaw</span>\<span class="n">smt</span> <span class="mi">4</span>\<span class="n">komputasi</span> <span class="n">numerik</span>\<span class="n">Tugas1</span>\<span class="n">docs</span>\<span class="n">montecarlo2</span><span class="o">.</span><span class="n">py</span>
+<span class="n">Hasil</span> <span class="p">:</span>  <span class="mf">7.900022095053624</span>
+
+<span class="n">Process</span> <span class="n">finished</span> <span class="k">with</span> <span class="n">exit</span> <span class="n">code</span> <span class="mi">0</span>
+</code></pre></div>
+
+<p>Kesimpulannya jika dibandingan dengan perhitungan manual hasil dari itegral dengan metode monte carlo hampir mendekati dan bahkan sama hasilnya.</p>
                 
                   
                 
