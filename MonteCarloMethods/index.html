@@ -13,7 +13,7 @@
         <meta name="description" content="A Material Design theme for MkDocs">
       
       
-        <link rel="canonical" href="https://squidfunk.github.io/mkdocs-material/NewtonRhapson/">
+        <link rel="canonical" href="https://squidfunk.github.io/mkdocs-material/MonteCarloMethods/">
       
       
         <meta name="author" content="Martin Donath">
@@ -42,7 +42,7 @@
     
     
       
-        <title>Tugas2 - Tugas Komputasi Numerik</title>
+        <title>Tugas7 - Tugas Komputasi Numerik</title>
       
     
     
@@ -116,10 +116,6 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#menyusun-algoritma-dan-pemrograman-newton-rhapson" tabindex="0" class="md-skip">
-        Skip to content
-      </a>
-    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
@@ -142,7 +138,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Tugas2
+                Tugas7
               
             </span>
           
@@ -309,52 +305,11 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Tugas2
-      </label>
-    
-    <a href="./" title="Tugas2" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../NewtonRhapson/" title="Tugas2" class="md-nav__link">
       Tugas2
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#menyusun-algoritma-dan-pemrograman-newton-rhapson" class="md-nav__link">
-    Menyusun Algoritma dan Pemrograman Newton Rhapson
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#listing-program" class="md-nav__link">
-    Listing Program
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
     
@@ -410,11 +365,18 @@
       
       
 
+  
 
-  <li class="md-nav__item">
-    <a href="../MonteCarloMethods/" title="Tugas7" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+    <a href="./" title="Tugas7" class="md-nav__link md-nav__link--active">
       Tugas7
     </a>
+    
   </li>
 
     
@@ -425,102 +387,101 @@
               </div>
             
             
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#menyusun-algoritma-dan-pemrograman-newton-rhapson" class="md-nav__link">
-    Menyusun Algoritma dan Pemrograman Newton Rhapson
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#listing-program" class="md-nav__link">
-    Listing Program
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
                 
                 
-                  <h1>Tugas2</h1>
+                  <h1>Tugas7</h1>
                 
-                <p>​       <strong>Metode Newton-Raphson Dengan Python</strong></p>
-<p>Newton-Raphson merupakan metode yang memanfaatkan turunan dan akar awal dari persamaan untuk mencari akar dari persamaan non linier.Untuk rumus Newton-Raphson sendiri adalah</p>
-<p><img alt="" src="F:\DATA\data dhea 2\dheaw\smt 4\komputasi numerik\newtonraphsonrumus.jpg" /></p>
-<p>Keterangan :</p>
-<p>xn = akar ke n
- xn-1 = akar ke n-1
- f(xn-1) = fungsi persamaan dari akar ke n-1
- f'(xn-1) = fungsi turunan persamaan dari akar ke n-1</p>
-<h3 id="menyusun-algoritma-dan-pemrograman-newton-rhapson"><strong>Menyusun Algoritma dan Pemrograman Newton Rhapson</strong><a class="headerlink" href="#menyusun-algoritma-dan-pemrograman-newton-rhapson" title="Permanent link">&para;</a></h3>
-<p>dari rumus yang kita dapat kita dapat menyusun sebuah algoritma yang nantinya akan dibuat menjadi sebuah program. Algoritma menyusun akar - akar <em>f(x)</em> = 0 sebagai berikut :</p>
-<p><img alt="image-20200310175450196" src="C:\Users\dea\AppData\Roaming\Typora\typora-user-images\image-20200310175450196.png" /></p>
-<h3 id="listing-program"><strong>Listing Program</strong><a class="headerlink" href="#listing-program" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">math</span>
-
-<span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="n">function</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="p">)</span> <span class="o">-</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
-    <span class="k">return</span> <span class="n">function</span>
-
-<span class="k">def</span> <span class="nf">derivative</span><span class="p">(</span><span class="n">x</span><span class="p">):</span> 
-    <span class="n">h</span> <span class="o">=</span> <span class="mf">0.000001</span>
-    <span class="n">derivative</span> <span class="o">=</span> <span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">h</span><span class="p">)</span> <span class="o">-</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">))</span> <span class="o">/</span> <span class="n">h</span>
-    <span class="k">return</span> <span class="n">derivative</span>
-
-<span class="k">def</span> <span class="nf">newton_raphson</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="k">return</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">/</span> <span class="n">derivative</span><span class="p">(</span><span class="n">x</span><span class="p">)))</span>
-
-
-
-
-<span class="k">def</span> <span class="nf">iterate</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
-    <span class="n">x</span> <span class="o">=</span> <span class="n">p</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-        <span class="n">x</span> <span class="o">=</span> <span class="n">newton_raphson</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span> <span class="n">x</span><span class="p">)</span>         
-    <span class="k">return</span> <span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
-
-
-<span class="nb">print</span><span class="p">(</span><span class="n">iterate</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+                <p><strong>Monte Carlo Methods</strong></p>
+<p>Metode Monte Carlo adalah kelas teknik untuk pengambilan sampel secara acak suatu distribusi probabilitas.</p>
+<p>Pada Konsep Umumnya:</p>
+<p>Telah ditemukan dalam konteks pengembangan bom atom pada tahun 1940-an. Bisa diaplikasikan untuk berbagai masalah. Bukan alat statistik. Bisa mengandalkan pengambilan sampel acak berulang. Biasanya memberikan solusi perkiraan. Bisa digunakan dalam kasus di mana analitis atau numerik
+solusi tidak ada atau terlalu sulit untuk diterapkan. Juga dapat digunakan oleh Lazy ScientistTM bahkan ketika sebuah solusi analitis atau numerik dapat diterapkan.</p>
+<p>Monte Carlo biasanya juga mengikuti beberapa petujuk yaitu:</p>
+<ol>
+<li>
+<p>Tentukan sifat statistik input yang memungkinkan</p>
+</li>
+<li>
+<p>Hasilkan banyak set input yang mungkin berikut
+  properti di atas</p>
+</li>
+<li>
+<p>Lakukan perhitungan deterministik dengan set ini</p>
+</li>
+<li>
+<p>Analisis hasilnya secara statistik</p>
+</li>
+</ol>
+<p>Kesalahan pada hasil biasanya berkurang 1 / √ N</p>
+<p>Ada banyak domain masalah di mana menggambarkan atau memperkirakan distribusi probabilitas relatif mudah, tetapi menghitung jumlah yang diinginkan tidak bisa dilakukan. Ini mungkin karena banyak alasan, seperti sifat stokastik domain atau jumlah variabel acak eksponensial.</p>
+<p>Alih-alih, jumlah yang diinginkan dapat diperkirakan dengan menggunakan pengambilan sampel acak, disebut sebagai metode Monte Carlo. Metode-metode ini awalnya digunakan sekitar waktu ketika komputer pertama diciptakan dan tetap meresap melalui semua bidang sains dan teknik, termasuk kecerdasan buatan dan pembelajaran mesin.</p>
+<p>Fungsi NumPy normal () dapat digunakan untuk mengambil sampel secara acak dari distribusi Gaussian dengan rata-rata yang ditentukan (mu), standar deviasi (sigma), dan ukuran sampel.</p>
+<p>Untuk membuat contoh lebih menarik, kami akan mengulangi percobaan ini empat kali dengan sampel berukuran berbeda. Kami berharap bahwa ketika ukuran sampel meningkat, kepadatan probabilitas akan lebih baik mendekati kepadatan sebenarnya dari fungsi target, mengingat hukum jumlah besar.</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># example of effect of size on monte carlo sample</span>
+<span class="kn">from</span> <span class="nn">numpy.random</span> <span class="kn">import</span> <span class="n">normal</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span>
+<span class="c1"># define the distribution</span>
+<span class="n">mu</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="n">sigma</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="c1"># generate monte carlo samples of differing size</span>
+<span class="n">sizes</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">1000</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">sizes</span><span class="p">)):</span>
+    <span class="c1"># generate sample</span>
+    <span class="n">sample</span> <span class="o">=</span> <span class="n">normal</span><span class="p">(</span><span class="n">mu</span><span class="p">,</span> <span class="n">sigma</span><span class="p">,</span> <span class="n">sizes</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+    <span class="c1"># plot histogram of sample</span>
+    <span class="n">pyplot</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">pyplot</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">sample</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+    <span class="n">pyplot</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%d</span><span class="s1"> samples&#39;</span> <span class="o">%</span> <span class="n">sizes</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+    <span class="n">pyplot</span><span class="o">.</span><span class="n">xticks</span><span class="p">([])</span>
+<span class="c1"># show the plot</span>
+<span class="n">pyplot</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </code></pre></div>
 
-<p>Output sebagai berikut :</p>
-<div class="codehilite"><pre><span></span><code><span class="mf">2.999994000093219</span>
-<span class="mf">2.199996832027392</span>
-<span class="mf">1.780829491896542</span>
-<span class="mf">1.6363030634057565</span>
-<span class="mf">1.618304588651506</span>
-<span class="mf">1.6180340496697716</span>
-<span class="mf">1.6180339887499486</span>
-<span class="mf">1.6180339887498947</span>
-<span class="mf">1.6180339887498947</span>
-<span class="mf">1.6180339887498947</span>
+<p>Menjalankan contoh membuat empat sampel berukuran berbeda dan plot histogram untuk masing-masing.</p>
+<p>Kita dapat melihat bahwa ukuran sampel kecil 10 dan 50 tidak secara efektif menangkap kepadatan fungsi target. Kita dapat melihat bahwa 100 sampel lebih baik, tetapi tidak sampai 1.000 sampel kita melihat dengan jelas bentuk lonceng yang umum dari distribusi probabilitas Gaussian.</p>
+<p>Ini menyoroti kebutuhan untuk menarik banyak sampel, bahkan untuk variabel acak sederhana, dan manfaat peningkatan akurasi perkiraan dengan jumlah sampel yang diambil</p>
+<p><img alt="" src="F:\DATA\data dhea 2\dheaw\smt 4\komputasi numerik\Tugas1\docs\carlos.png" /></p>
+<p>Untuk penerapan contoh lain yang menggunakan Metode Monte Carlos.</p>
+<p>Tulis sebuah program untuk memverifikasi angka itu <img alt="" src="F:\DATA\data dhea 2\dheaw\smt 4\komputasi numerik\Tugas1\docs\carlos1.png" />. Menggunakan metode monte carlo dan 2500 angka acak.</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">random</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">N</span><span class="o">=</span><span class="mi">2500</span>
+
+
+<span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">(</span><span class="mi">4</span><span class="o">-</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mf">0.5</span>
+
+
+<span class="n">area</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
+    <span class="n">xrand</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">xrand</span><span class="p">)):</span>
+        <span class="n">xrand</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
+        <span class="n">integral</span> <span class="o">=</span> <span class="mf">0.0</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
+        <span class="n">integral</span><span class="o">+=</span><span class="n">func</span><span class="p">(</span><span class="n">xrand</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+
+    <span class="n">jawab</span> <span class="o">=</span> <span class="p">(</span><span class="n">b</span><span class="o">-</span><span class="n">a</span><span class="p">)</span><span class="o">/</span><span class="nb">float</span><span class="p">(</span><span class="n">N</span><span class="p">)</span><span class="o">*</span><span class="n">integral</span>
+    <span class="n">area</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">jawab</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Hasil phi&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">area</span><span class="p">,</span><span class="n">bins</span> <span class="o">=</span> <span class="mi">30</span><span class="p">,</span> <span class="n">ec</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Area&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </code></pre></div>
+
+<p>Hasil running.</p>
+<p><img alt="" src="F:\DATA\data dhea 2\dheaw\smt 4\komputasi numerik\Tugas1\docs\carlos2.png" /></p>
                 
                   
                 
@@ -542,7 +503,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../McLaurin/" title="Tugas1" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../MetodeEuler/" title="Tugas6" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -551,25 +512,11 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Tugas1
+                Tugas6
               </span>
             </div>
           </a>
         
-        
-          <a href="../EliminasiGaus/" title="Tugas3" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Tugas3
-              </span>
-            </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
-            </div>
-          </a>
         
       </nav>
     </div>
