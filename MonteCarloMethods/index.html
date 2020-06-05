@@ -466,6 +466,39 @@ solusi tidak ada atau terlalu sulit untuk diterapkan. Juga dapat digunakan oleh 
 <p><img alt="" src="../monte4.png" /></p>
 <p>Kesimpulannya adalah setelah dilakukan 3 kali percobaan nilai phi mendekati 3,14.</p>
 <p>Hasil Nomor 4.</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">random</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">N</span><span class="o">=</span><span class="mi">100</span>
+<span class="n">n</span><span class="o">=</span><span class="mi">3</span>
+<span class="n">xrand</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
+<span class="n">yrand</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
+<span class="n">zrand</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
+<span class="n">integral</span><span class="o">=</span><span class="mf">0.0</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">xrand</span><span class="p">)):</span>
+        <span class="n">xrand</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">yrand</span><span class="p">)):</span>
+        <span class="n">yrand</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">zrand</span><span class="p">)):</span>
+        <span class="n">zrand</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">+</span><span class="p">(</span><span class="n">y</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">+</span><span class="p">(</span><span class="n">z</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
+        <span class="n">integral</span><span class="o">+=</span><span class="n">func</span><span class="p">(</span><span class="n">xrand</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">yrand</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">zrand</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+
+<span class="n">jawab</span><span class="o">=</span><span class="p">(</span><span class="n">b</span><span class="o">-</span><span class="n">a</span><span class="p">)</span><span class="o">/</span><span class="nb">float</span><span class="p">(</span><span class="n">N</span><span class="p">)</span><span class="o">*</span><span class="n">integral</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hasil : &quot;</span><span class="p">,</span><span class="n">jawab</span><span class="p">)</span>
+</code></pre></div>
+
+<p>Runningnya:</p>
 <div class="codehilite"><pre><span></span><code><span class="c1">#Percobaan1</span>
 <span class="n">F</span><span class="p">:</span>\<span class="n">DATA</span>\<span class="n">data</span> <span class="n">dhea</span> <span class="mi">2</span>\<span class="n">dheaw</span>\<span class="n">smt</span> <span class="mi">4</span>\<span class="n">komputasi</span> <span class="n">numerik</span>\<span class="n">Tugas1</span>\<span class="n">docs</span>\<span class="n">montecarlo2</span><span class="o">.</span><span class="n">py</span> 
 <span class="n">Hasil</span> <span class="p">:</span>  <span class="mf">7.889285659898637</span>
